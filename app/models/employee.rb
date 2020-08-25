@@ -2,7 +2,7 @@ class Employee < ApplicationRecord
 	include Searchable
 
 	validates :phoneNumber, presence: true, numericality: {only_integer: true}
-	validates_date :date_of_birth, on_or_before: lambda { Date.current }
+	validates_date :date_of_birth, before: lambda { Date.current }
 
 	validate :verify_unique_email?
 	validate :verify_image?

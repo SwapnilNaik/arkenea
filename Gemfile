@@ -11,6 +11,8 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+gem 'bootstrap-sass'
+gem 'bootstrap'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,6 +31,9 @@ gem 'simple_form'
 #installing elastic search for search functionality
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+#timeliness to validate date of birth
+gem 'validates_timeliness', '~> 5.0.0.beta1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
