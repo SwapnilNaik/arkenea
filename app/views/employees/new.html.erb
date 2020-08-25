@@ -1,0 +1,19 @@
+<h1>New Employee</h1>
+
+<%= simple_form_for @user, url: examples_vertical_path do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :id%>
+  <%= f.input :name %>
+	<%= f.input :phoneNumber%>
+  <%= f.input :email, input_html: { autocomplete: 'email' } %>
+  <%= f.input :birthday %>
+	<%= f.input :emp_image, as: :file, input_html: { accept: User::emp_image } %>
+	
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
+
+<%= render 'form', employee: @employee %>
+
+<%= link_to 'Back', employees_path %>
